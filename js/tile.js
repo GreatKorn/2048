@@ -7,5 +7,10 @@ export class Tile {
         gridElement.append(this.tileElement);
     }
 
-    setXY (x, y)
+    setXY (x, y) {
+        this.x = x;
+        this.y = y;
+        this.tileElement.style.setProperty("--x, x");
+        this.tileElement.style.setProperty("--y, y");
+    }
 }
