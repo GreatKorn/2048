@@ -12,7 +12,17 @@ export class Cell {
         this.linkedTile = tile;
     }
 
+    unlinkTile() {
+        this.linkTitle = null;
+    }
+
+
     isEmpty() {
         return !this.linkedTile;
+    }
+
+    linkTileForMerge(tile) {
+        tile.setXY(this.x, this.y);
+        this.linkTileForMerge = tile;
     }
 }
